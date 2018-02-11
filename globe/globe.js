@@ -87,7 +87,7 @@ DAT.Globe = function(container, opts) {
 
   function init() {
 
-    container.style.color = '#fff';
+    container.style.color = '#FF0000';
     container.style.font = '13px/20px Arial, sans-serif';
 
     var shader, uniforms, material;
@@ -221,8 +221,8 @@ DAT.Globe = function(container, opts) {
     if (this._baseGeometry !== undefined) {
       if (this.is_animated === false) {
         this.points = new THREE.Mesh(this._baseGeometry, new THREE.MeshBasicMaterial({
-              color: 0xffffff,
-              vertexColors: THREE.FaceColors,
+              color: 0xFF0000,
+              //vertexColors: THREE.FaceColors,
               morphTargets: false
             }));
       } else {
@@ -236,8 +236,8 @@ DAT.Globe = function(container, opts) {
           }
         }
         this.points = new THREE.Mesh(this._baseGeometry, new THREE.MeshBasicMaterial({
-              color: 0xffffff,
-              vertexColors: THREE.FaceColors,
+              color: 0xFF0000,
+              //vertexColors: THREE.FaceColors,
               morphTargets: true
             }));
       }

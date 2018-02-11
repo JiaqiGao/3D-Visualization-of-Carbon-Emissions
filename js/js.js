@@ -9,18 +9,18 @@ DAT.Globe = function(container, colorFn) {
   };
 
   var camera, scene, renderer;
-  var geometry, material, mesh, point;
-  var canvas;
+  var geometry, material, mesh, point
+  var canvas
 
 
-  var x = 1;
-  var y = 1;
+  var x = 1
+  var y = 1
 
   var data;
 
   function init() {
-      camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-      camera.position.z = 1;
+      camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 )
+      camera.position.z = 1
 
       scene = new THREE.Scene();
 
@@ -34,14 +34,14 @@ DAT.Globe = function(container, colorFn) {
       scene.add( light )
 
       //Create geometry and material
-      var geometry = new THREE.SphereGeometry(0.5, 32, 32);
-      var texture = new THREE.TextureLoader().load( "../images/earth.jpg" );
+      var geometry = new THREE.SphereGeometry(0.5, 32, 32)
+      var texture = new THREE.TextureLoader().load( "../images/earth.jpg" )
       var material = new THREE.MeshBasicMaterial( {
           map: texture
       } );
 
-      point = new THREE.Mesh(geometry);
-      var subgeo = new THREE.Geometry();
+      point = new THREE.Mesh(geometry)
+      var subgeo = new THREE.Geometry()
 
 /*
       for (i = 0; i < data.length; i++) {
@@ -92,12 +92,12 @@ DAT.Globe = function(container, colorFn) {
       /////////////////////////////////
 
 
-      mesh = new THREE.Mesh( geometry, material );
-      scene.add( mesh );
+      mesh = new THREE.Mesh( geometry, material )
+      scene.add( mesh );;;;;;;
 
-      renderer = new THREE.WebGLRenderer( { antialias: true } );
-      renderer.setSize( window.innerWidth, window.innerHeight );
-      document.body.appendChild( renderer.domElement );
+      renderer = new THREE.WebGLRenderer( { antialias: true } )
+      renderer.setSize( window.innerWidth, window.innerHeight )
+      document.body.appendChild( renderer.domElement )
 
   }
 
@@ -108,51 +108,44 @@ DAT.Globe = function(container, colorFn) {
 
   function addPoint(lat, lng, size, color, subgeo) {
 
-      var phi = (90 - lat) * Math.PI / 180;
-      var theta = (180 - lng) * Math.PI / 180;
+      var phi = (90 - lat) * Math.PI / 180
+      var theta = (180 - lng) * Math.PI / 180
 
-      point.position.x = 200 * Math.sin(phi) * Math.cos(theta);
-      point.position.y = 200 * Math.cos(phi);
-      point.position.z = 200 * Math.sin(phi) * Math.sin(theta);
+      point.position.x = 200 * Math.sin(phi) * Math.cos(theta)
+      point.position.y = 200 * Math.cos(phi)
+      point.position.z = 200 * Math.sin(phi) * Math.sin(theta)
 
       point.lookAt(mesh.position);
 
-      point.scale.z = Math.max( size, 0.1 ); // avoid non-invertible matrix
+      point.scale.z = Math.max( size, 0.1 ) // avoid non-invertible matrix
       point.updateMatrix();
 
       for (var i = 0; i < point.geometry.faces.length; i++) {
 
-        point.geometry.faces[i].color = color;
+        point.geometry.faces[i].color = color
 
       }
 
-      THREE.GeometryUtils.merge(subgeo, point);
+      THREE.GeometryUtils.merge(subgeo, point)
   }
 
 
   function positioning(event) {
-      console.log("mouse: "+event.clientX +","+event.clientY+" window"+ window.innerWidth/2+","+window.innerHeight/2+"\nx and y")
       if(event.clientX > window.innerWidth/2 && x < 0)
               x = 1
-
       if(event.clientX < window.innerWidth/2 && x > 0)
               x = -1
-
       if(event.clientY > window.innerHeight/2 && y < 0)
               y = 1
-
       if(event.clientY < window.innerHeight/2 && y > 0)
               y = -1
   }
 
   function animate(e) {
-
-      requestAnimationFrame( animate );
-      document.addEventListener("click", positioning);
-
-      mesh.rotation.x += 0.003*x
-      mesh.rotation.y += 0.003*y
-
+      requestAnimationFrame( animate )
+      document.addEventListener("click", positioning)
+      mesh.rotation.x += 0.003 * x
+      mesh.rotation.y += 0.003 * y
       renderer.render( scene, camera )
 
   }

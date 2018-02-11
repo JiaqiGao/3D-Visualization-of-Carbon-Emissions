@@ -44,7 +44,6 @@ $(document).ready(function(){
       if(scroll_start > 10) {
           $("#toptext").css('opacity', 0);
 
-
        } else {
           $("#toptext").css('opacity', 1);
        }
@@ -58,5 +57,11 @@ $(document).ready(function(){
      }, 1500);
    });
 
+   $(document).ready(function() {
+    $("#wow").delay(20000).fadeIn(10);
+    $("a#wow").on('click', function(){
+     window.location = "http://www.google.com/";
+});
+});
 
 });

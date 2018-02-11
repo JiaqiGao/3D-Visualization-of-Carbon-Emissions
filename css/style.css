@@ -105,9 +105,14 @@
     }
 }
 
+body{
+  background-color: #808080;
+}
+
 .overlay{
   background-color: rgba(0,0,0,0.5);
   text-align: center;
+  height: 100vh;
 }
 
 h1{
@@ -120,6 +125,17 @@ h1{
   font-family: 'Halisr Black', sans-serif;
 }
 
+h2{
+  text-align: center;
+  font-family: 'Courier';
+}
+
+#wow{
+  margin-top: 100px;
+  display: none;
+  z-index: 100000;
+}
+
 h4{
   text-align: center;
   background-color: none;
@@ -127,21 +143,74 @@ h4{
   font-family: 'Halisr Light', sans-serif;
 }
 
-p{
+#p1{
   color: Pink;
   font-family: "Courier";
   font-size: 30px;
-  margin: 10px 0 0 10px;
+  margin: 3px 0 0 3px;
   white-space: nowrap;
   overflow: hidden;
-  width: 30em;
+  width: 50em;
+  padding: 30px;
+  opacity: 0;
   text-align: left;
-  animation: type 3s steps(60, end);
-  animation-delay: 2.5s;
+  animation: type 5s steps(60, end);
+  animation-delay: 4s;
+}
+
+#p2{
+  color: Pink;
+  font-family: "Courier";
+  font-size: 30px;
+  margin: 3px 0 0 3px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  text-align: left;
+  opacity: 0;
+  animation: type 5s steps(60, end);
+  animation-delay: 8s;
+}
+
+#p3{
+  color: Pink;
+  font-family: "Courier";
+  font-size: 30px;
+  margin: 3px 0 0 3px;
+  padding: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 50em;
+  margin-top: -40px;
+  text-align: left;
+  opacity: 0;
+  animation: type 5s steps(60, end);
+  animation-delay: 10.5s;
+}
+
+#p4{
+  color: Pink;
+  font-family: "Courier";
+  font-size: 30px;
+  margin: 3px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 30px;
+  width: 50em;
+  text-align: left;
+  opacity: 0;
+  animation: type 5s steps(60, end);
+  animation-delay: 14.5s;
 }
 
 @keyframes type{
-  from { width: 0; }
+  from {
+    width: 0;
+    opacity: 1;
+  }
 }
 
 canvas{
@@ -159,13 +228,13 @@ canvas{
 }
 
 #scrolldown{
-  height: 800px;
-  background-color: white;
+  height: 700px;
   color: grey;
   display: block;
   text-align: center;
-  padding: 8vw;
-  line-height: 10vw;
+  padding-top: 2vw;
+  padding-left: 8vw;
+  padding-right: 8vw;
 }
 
 #container{

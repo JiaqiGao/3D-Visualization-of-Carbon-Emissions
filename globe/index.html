@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>WebGL Globe</title>
+    <title>Carbon Emissions</title>
     <meta charset="utf-8">
     <style type="text/css">
       html {
@@ -58,7 +58,7 @@
       #title {
         position: absolute;
         top: 20px;
-        width: 270px;
+        width: 670px;
         left: 20px;
         background-color: rgba(0,0,0,0.2);
         border-radius: 3px;
@@ -110,10 +110,11 @@
     <span id="year1990" class="year">1990</span>
     <span id="year1995" class="year">1995</span>
     <span id="year2000" class="year">2000</span>
+    <span id="year2005" class="year">2005</span>
   </div>
 
   <div id="title">
-    Carbon Emissions by Country
+    Carbon Emissions by Country (metric tons per capita)
   </div>
 
 
@@ -127,11 +128,11 @@
       Detector.addGetWebGLMessage();
     } else {
 
-      var years = ['1990','1995','2000'];
+      var years = ['1990','1995','2000','2005'];
       var container = document.getElementById('container');
       var globe = new DAT.Globe(container);
 
-      console.log(globe);
+      //console.log(globe);
       var i, tweens = [];
 
       var settime = function(globe, t) {

@@ -153,7 +153,7 @@ h4{
   width: 50em;
   padding: 30px;
   opacity: 0;
-  text-align: center;
+  text-align: left;
   animation: type 5s steps(60, end);
   animation-delay: 10s;
 }
@@ -169,7 +169,7 @@ h4{
   white-space: nowrap;
   overflow: hidden;
   width: 50em;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   animation: type 5s steps(60, end);
   animation-delay: 14s;
@@ -185,7 +185,7 @@ h4{
   overflow: hidden;
   width: 50em;
   margin-top: -40px;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   animation: type 5s steps(60, end);
   animation-delay: 16.5s;
@@ -200,7 +200,7 @@ h4{
   overflow: hidden;
   padding: 30px;
   width: 50em;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   animation: type 5s steps(60, end);
   animation-delay: 20.5s;

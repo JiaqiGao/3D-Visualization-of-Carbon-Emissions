@@ -58,7 +58,7 @@ $(document).ready(function(){
    });
 
    $(document).ready(function() {
-    $("#wow").delay(20000).fadeIn(10);
+    $("#wow").delay(24000).fadeIn(10);
     $("a#wow").on('click', function(){
      window.location = "http://www.google.com/";
 });

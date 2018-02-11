@@ -143,18 +143,15 @@ DAT.Globe = function(container, colorFn) {
 
       if(event.clientY < window.innerHeight/2 && y > 0)
               y = -1
-
-
   }
-
 
   function animate(e) {
 
       requestAnimationFrame( animate );
       document.addEventListener("click", positioning);
 
-      mesh.rotation.x += 0.001*x
-      mesh.rotation.y += 0.001*y
+      mesh.rotation.x += 0.003*x
+      mesh.rotation.y += 0.003*y
 
       renderer.render( scene, camera )
 

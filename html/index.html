@@ -1,19 +1,52 @@
 <html>
 	<head>
-		<title>three.js app</title>
-		<style>
-			body { margin: 0; }
-			canvas { width: 100%; height: 100% }
-		</style>
+		<title>hey is the Earth ok?</title>
+
+	  <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	  <link rel = "stylesheet" type = "text/css" href = "../css/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	  <script type="text/javascript" src="../js/jquery.min.js"></script>
+	  <script type="text/javascript" src="../js/tether.min.js"></script>
+	  <script type="text/javascript" src="../js/tether_bootstrap.min.js"></script>
+	  <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/animate.js"></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-          <div id="webgl"></div>
-					<div id="container"></div>
-	  <script src="../js/three.min.js"></script>
-	  <script src="../js/Detector.js"></script>
-	  <script src="../js/TrackballControls.js"></script>
-	  <script src="../js/js.js"></script>
-		<script src="../js/addGlobe.js"></script>
+
+			<div style="z-index:90;">
+		    <div style="position: fixed; width: 100%; height: 800px; left: 0; top: 0; background-color:rgba(0,0,0,0.5); color:white; text-align:center;" class="overlay">
+					<div id="toptext">
+						<h1>Uh...let's say Earth has had better days</h1>
+						<h4>(Click around the Earth to change the direction)</h4>
+						<div id="bottom">
+							<a href="#scrolldown" id="button"><span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a>
+						</div>
+					</div>
+		    </div>
+				<div id="webgl"></div>
+				<div id="container"></div>
+				<script src="../js/three.min.js"></script>
+				<script src="../js/Detector.js"></script>
+				<script src="../js/TrackballControls.js"></script>
+				<script src="../js/js.js"></script>
+				<script src="../js/addGlobe.js"></script>
+ 		</div>
+
+		<div id="scrolldown">
+			<p>Carbon emissions are the highest it's ever been </p>
+			<h2></h2>
+			<h2></h2>
+			<h2></h2>
+			<h2></h2>
+		</div>
+
+		<div id="footer">
+			Made with <3 by Jiaqi @UncommonHacks2k18
+		</div>
+
+
 
 	</body>
 </html>

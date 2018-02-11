@@ -9,7 +9,7 @@ addGlobe = function(){
     var xhr = new XMLHttpRequest();
 
     // Where do we get the data?
-    xhr.open( 'GET', 'data.json', true );
+    xhr.open( 'GET', '../js/data.json', true );
 
     // What do we do when we have it?
     xhr.onreadystatechange = function() {
@@ -19,18 +19,18 @@ addGlobe = function(){
 
         // Parse the JSON
         var data = JSON.parse( xhr.responseText );
+        console.log(data[0]);
 
         // Tell the globe about your JSON data
-        /*
+
         for ( var i = 0; i < data.length; i ++ ) {
             globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
         }
 
         // Create the geometry
-        globe.createPoints();
-*/
+        //globe.createPoints();
         // Begin animation
-        globe.animate();
+        //globe.animate();
 
     }
 

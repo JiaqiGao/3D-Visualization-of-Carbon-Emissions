@@ -1,7 +1,7 @@
 # 3D Data Visualization of Global Carbon Emissions 
-###### Created for UncommonHacks 2018
+### Created for UncommonHacks 2018
 
-### Setup
+## Setup
 
 Run a local HTTP server in the terminal
 ><em>python -m SimpleHTTPServer</em>
@@ -9,7 +9,7 @@ Run a local HTTP server in the terminal
 Enter the URL <em>localhost:8000</em> in your web browser
 
 
-*built with three.js, data sourced from [databank.worldbank.org] (databank.worldbank.org)*
+##### *built with three.js, data sourced from [databank.worldbank.org] (databank.worldbank.org)*
 
 
 

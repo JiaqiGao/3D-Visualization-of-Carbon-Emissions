@@ -8,8 +8,9 @@ Run a local HTTP server in the terminal
 
 Enter the URL <em>localhost:8000</em> in your web browser
 
+---
 
-##### *built with three.js, data sourced from [databank.worldbank.org](https://www.databank.worldbank.org)*
+#### *built with three.js, data sourced from [databank.worldbank.org](https://www.databank.worldbank.org)*
 
 
 

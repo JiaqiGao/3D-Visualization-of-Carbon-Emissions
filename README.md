@@ -1,9 +1,9 @@
 # 3D Interactive Data Visualization of Global Carbon Emissions 
-#####Created for UncommonHacks 2018
+####Created for UncommonHacks 2018
 
-#### Setup
+### Setup
 
-Run a local HTTP server
+Run a local HTTP server in the terminal
 ><em>python -m SimpleHTTPServer</em>
 
 Enter the URL <em>localhost:8000</em> in your web browser

@@ -4,7 +4,7 @@
 ## Setup
 
 Run a local HTTP server 
-><em>python -m SimpleHTTPServer</em>
+><em>python3 -m http.server</em>
 
 Enter the URL <em>localhost:8000</em> in your web browser
 
